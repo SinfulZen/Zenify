@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <title>Checking Browser...</title>
+    <title>Incomplete</title>
     <meta name="description" content="An AIO site featuring advanced online tools, programs and projects that are sure to peak Your curiosity!">
     <meta name="keywords" content="Sinful, Zen, SinfulZen, SZ, Developments, SZDevelopments, Company, Organisation, Group, Team, Teams, Software, Tools, Environment, Virtual, Physical, Code, Coder, Coding, Hack, Hacker, Hacking, Develop, Developer, Dev, Drive, Disk, Optical, Storage, Facility, Facilitate, HeadQuarters, HQ, Base, Device, Devices, Mobile, Desktop, Gaming, Phone, Computer, PC, Tablet, Gaming, Console, Social, Media, SocialMedia, Google, Microsoft, Meta, Facebook, Messenger, Instagram, Telegram, WhatsApp, Twitter, X, TikTok, SnapChat, Discord, YouTube, Followers, Subscribers, Likes, Comments, Views, Shares, Stat, Stats, Statistics, Data, Funds, Funding, Money, Pounds, Dollars, Euros, GBP, USD, Subscription, List, Whitelist, Blacklist">
     <meta name="author" content="SZ Developments">
@@ -124,7 +124,7 @@
 </html>
 
 <!-- MAIN -->
-<html lang="en">
+<html>
 <head>
 
     <style>
@@ -151,79 +151,147 @@
             z-index: -1;
         }
 
-        .loader-container {
+        .login-container {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            padding: 20px 30px;
+            padding: 30px;
             border-radius: 15px;
             border: 2px solid white;
             text-align: center;
+            width: 320px;
             z-index: 1;
         }
 
-        .dots {
-            display: inline-block;
-            position: relative;
-            width: 80px;
-            height: 40px;
-            margin-bottom: 5px;
+        .login-icon img {
+            width: 50px;
+            height: 50px;
         }
 
-        .dots div {
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            background: white;
-            border-radius: 50%;
-            animation: smooth-dots 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-        }
-
-        .dots div:nth-child(1) {
-            left: 8px;
-            animation-delay: -0.24s;
-        }
-
-        .dots div:nth-child(2) {
-            left: 32px;
-            animation-delay: -0.12s;
-        }
-
-        .dots div:nth-child(3) {
-            left: 56px;
-        }
-
-        @keyframes smooth-dots {
-            0%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .loading-text {
+        .login-header {
             color: white;
-            font-size: 18px;
             font-family: Arial, sans-serif;
-            margin-top: 0;
+            margin-top: 15px;
+        }
+
+        .input-group {
+            position: relative;
+            margin: 15px 0;
+            width: 100%;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            border-radius: 10px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .input-group img {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+        }
+
+        .hyperlinks {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .hyperlinks a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .button-group .btn {
+            width: calc(50% - 5px);
+            padding: 8px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .btn-solid {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-transparent {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .or-text {
+            color: white;
+            margin-top: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="loader-container">
-        <div class="dots">
-            <div></div>
-            <div></div>
-            <div></div>
+    <div class="login-container">
+
+        <div class="login-icon">
+            <img src="https://sinfulzen.github.io/Zenify/assets/icons/account.png" alt="">
         </div>
-        <div class="loading-text">Checking browser, please wait...</div>
+
+        <h3 class="login-header">Login</h3>
+
+        <div class="input-group">
+            <img src="https://sinfulzen.github.io/Zenify/assets/icons/username.png" alt="">
+            <input type="text" placeholder="Username">
+        </div>
+        <div class="input-group">
+            <img src="https://sinfulzen.github.io/Zenify/assets/icons/password.png" alt="">
+            <input type="password" placeholder="Password">
+        </div>
+
+        <div class="hyperlinks">
+            <a href="https://sinfulzen.github.io/Zenify/main/account/signup/index.html">Sign-up</a>
+            <a href="https://sinfulzen.github.io/Zenify/main/account/forgotten/index.html">Forgot password?</a>
+        </div>
+
+        <div class="button-group">
+            <div class="btn btn-solid" onclick="window.location.href='https://sinfulzen.github.io/Zenify/main/home/index.html';">Login</div>
+            <div class="btn btn-transparent" onclick="window.location.href='https://sinfulzen.github.io/Zenify/main/home/index.html';">Guest</div>
+        </div>
+
+        <div class="or-text">Or continue with</div>
+
+        <div class="social-icons">
+            <img src="https://sinfulzen.github.io/Zenify/assets/icons/google.png" onclick="window.location.href='https://www.social1.com';" alt="">
+            <img src="https://sinfulzen.github.io/Zenify/assets/icons/microsoft.png" onclick="window.location.href='https://www.social2.com';" alt="">
+            <img src="https://sinfulzen.github.io/Zenify/assets/icons/facebook.png" onclick="window.location.href='https://www.social3.com';" alt="">
+            <img src="https://sinfulzen.github.io/Zenify/assets/icons/instagram.png" onclick="window.location.href='https://www.social4.com';" alt="">
+            <img src="https://sinfulzen.github.io/Zenify/assets/icons/twitter.png" onclick="window.location.href='https://www.social5.com';" alt="">
+        </div>
     </div>
-
-    <script>
-
-        setTimeout(function() {
-            window.location.href = 'https://sinfulzen.github.io/Zenify/main/account/index.html';
-        }, 5000);
-    </script>
 </body>
 </html>
