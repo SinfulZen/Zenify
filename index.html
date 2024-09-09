@@ -123,418 +123,107 @@
 </body>
 </html>
 
-<!-- BACKGROUND -->
-<html>
+<!-- MAIN -->
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <style>
-        * {
+
+        body, html {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        html, body {
             height: 100%;
-            background-color: #121212;
-            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
+            background: url('https://sinfulzen.github.io/Zenify/assets/background.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
 
-        .bubble-container {
+        body::before {
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.0);
+            z-index: -1;
         }
 
-        .bubble {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.3) 70%, rgba(255,255,255,0) 100%);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-            animation: pulse 5s infinite ease-in-out;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 0.7;
-            }
-            50% {
-                transform: scale(1.5);
-                opacity: 1;
-            }
-        }
-
-        .bubble:nth-child(1) {
-            width: 150px;
-            height: 150px;
-            top: 10%;
-            left: 15%;
-            animation-duration: 6s;
-        }
-
-        .bubble:nth-child(2) {
-            width: 200px;
-            height: 200px;
-            top: 30%;
-            left: 70%;
-            animation-duration: 7s;
-        }
-
-        .bubble:nth-child(3) {
-            width: 100px;
-            height: 100px;
-            top: 50%;
-            left: 40%;
-            animation-duration: 4s;
-        }
-
-        .bubble:nth-child(4) {
-            width: 250px;
-            height: 250px;
-            top: 70%;
-            left: 10%;
-            animation-duration: 8s;
-        }
-
-        .bubble:nth-child(5) {
-            width: 180px;
-            height: 180px;
-            top: 85%;
-            left: 60%;
-            animation-duration: 5s;
-        }
-
-        @media (max-width: 768px) {
-            .bubble {
-                width: 50%;
-                height: 50%;
-                animation-duration: 6s;
-            }
-        }
-
-    </style>
-</head>
-<body>
-
-    <div class="bubble-container">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-    </div>
-
-</body>
-</html>
-
-<!-- MAIN -->
-<html>
-<head>
-
-    <style>
-
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .centered-body {
-            background-color: #141414 !important;
+        .loader-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px 30px;
             border-radius: 15px;
             border: 2px solid white;
-            padding: 20px;
-            width: 350px;
             text-align: center;
+            z-index: 1;
         }
 
-        .icon {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 15px;
+        .dots {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 40px;
+            margin-bottom: 5px;
         }
 
-        h3 {
-            margin: 10px 0 5px;
-            font-family: Arial, sans-serif;
-            color: white;
-        }
-
-        .subtext {
-            font-size: 14px;
-            color: #ccc;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .button {
-            background-color: #1e1e1e;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            border: 2px solid white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            text-decoration: none;
-            width: 100%;
-        }
-
-
-        .button-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="centered-body">
-
-        <img src="https://sinfulzen.github.io/Zenify/assets/icons/incomplete.png" alt="" class="icon">
-
-        <h3>Page Incomplete</h3>
-        <div class="subtext">Please come back soon!</div>
-
-        <p>This section of the site is incomplete, please come back soon and check again! Feel free to check Us out on GitHub and YouTube while We work on the site!</p>
-
-        <div class="button-container">
-            <a href="https://github.com/sinfulzen/Zenify" class="button" target="_blank">
-                <img src="https://sinfulzen.github.io/Zenify/assets/icons/github.png" alt="" class="button-icon">
-                GitHub
-            </a>
-            <a href="https://youtube.com/@official.sinfulzen" class="button" target="_blank">
-                <img src="https://sinfulzen.github.io/Zenify/assets/icons/youtube.png" alt="" class="button-icon">
-                YouTube
-            </a>
-        </div>
-    </div>
-</body>
-</html>
-
-<!-- NAVIGATION -->
-<html>
-<head>
-
-    <style>
-
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nav-bar {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #141414;
-            border-radius: 30px;
-            border: 2px solid white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            width: 350px;
-        }
-
-        .nav-icon {
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-        }
-
-        .search-popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #141414;
-            border-radius: 20px;
-            border: 2px solid white;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-            border-radius: 20px;
-            border: 2px solid white;
-            padding: 10px;
-            background-color: #1e1e1e;
-        }
-
-        .search-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-        }
-
-        .search-input {
-            border: none;
-            background: none;
-            color: white;
-            flex-grow: 1;
-            outline: none;
-        }
-
-        .close-text {
-            margin-top: 20px;
-            color: white;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        .dropdown {
-            display: none;
+        .dots div {
             position: absolute;
-            bottom: 78px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #141414;
-            border-radius: 20px;
-            border: 2px solid white;
-            padding: 10px;
-            width: 200px;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            animation: smooth-dots 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
         }
 
-        .dropdown-item {
-            display: flex;
-            align-items: center;
-            padding: 10px;
+        .dots div:nth-child(1) {
+            left: 8px;
+            animation-delay: -0.24s;
+        }
+
+        .dots div:nth-child(2) {
+            left: 32px;
+            animation-delay: -0.12s;
+        }
+
+        .dots div:nth-child(3) {
+            left: 56px;
+        }
+
+        @keyframes smooth-dots {
+            0%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .loading-text {
             color: white;
-            cursor: pointer;
-        }
-
-        .dropdown-item:hover {
-            border: 2px solid white;
-            border-radius: 20px;
-        }
-
-        .dropdown-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            margin-top: 0;
         }
     </style>
 </head>
 <body>
-
-    <div class="nav-bar">
-        <img src="https://sinfulzen.github.io/Zenify/assets/icons/home.png" class="nav-icon" alt="" onclick="window.open('index.html', '_blank')">
-        <img src="https://sinfulzen.github.io/Zenify/assets/icons/search.png" class="nav-icon" alt="" onclick="showSearchPopup()">
-        <img src="https://sinfulzen.github.io/Zenify/assets/icons/menu.png" class="nav-icon" alt="" onclick="toggleDropdown()">
-        <img src="https://sinfulzen.github.io/Zenify/assets/icons/settings.png" class="nav-icon" alt="" onclick="window.open('https://sinfulzen.github.io/Zenify/main/settings/index.html', '_blank')">
-        <img src="https://sinfulzen.github.io/Zenify/assets/icons/quit.png" class="nav-icon" alt="" onclick="window.close()">
-    </div>
-
-    <div class="search-popup" id="searchPopup">
-        <div class="search-bar">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/search.png" class="search-icon" alt="">
-            <input type="text" class="search-input" placeholder="Search...">
+    <div class="loader-container">
+        <div class="dots">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <div class="close-text" onclick="closeSearchPopup()">Close</div>
-    </div>
-
-    <div class="dropdown" id="dropdownMenu">
-        <div class="dropdown-item" onclick="window.open('https://sinfulzen.github.io/Zenify/main/info/index.html', '_blank')">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/info.png" class="dropdown-icon" alt="">
-            Info
-        </div>
-        <div class="dropdown-item" onclick="window.open('https://sinfulzen.github.io/Zenify/main/projects/index.html', '_blank')">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/project.png" class="dropdown-icon" alt="">
-            Projects
-        </div>
-                <div class="dropdown-item" onclick="window.open('https://sinfulzen.github.io/Zenify/main/downloads/index.html', '_blank')">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/download.png" class="dropdown-icon" alt="">
-            Downloads
-        </div>
-                <div class="dropdown-item" onclick="window.open('https://sinfulzen.github.io/Zenify/main/services/index.html', '_blank')">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/service.png" class="dropdown-icon" alt="">
-            Services
-        </div>
-                <div class="dropdown-item" onclick="window.open('https://sinfulzen.github.io/Zenify/main/tools/index.html', '_blank')">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/tools.png" class="dropdown-icon" alt="#">
-            Tools
-        </div>
-                <div class="dropdown-item" onclick="window.open('https://sinfulzen.github.io/Zenify/experiments/info/index.html', '_blank')">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/experiments.png" class="dropdown-icon" alt="">
-            Experiments
-        </div>
-                <div class="dropdown-item" onclick="window.open('https://sinfulzen.github.io/Zenify/main/app/index.html', '_blank')">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/app.png" class="dropdown-icon" alt="">
-            Our App
-        </div>
-                <div class="dropdown-item" onclick="window.open('https://sinfulzen.github.io/Zenify/main/team/index.html', '_blank')">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/team.png" class="dropdown-icon" alt="">
-            Team
-        </div>
-                <div class="dropdown-item" onclick="window.open('https://sinfulzen.github.io/Zenify/main/misc/index.html', '_blank')">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/misc.png" class="dropdown-icon" alt="">
-            Misc
-        </div>
-                <div class="dropdown-item" onclick="window.open('https://sinfulzen.github.io/Zenify/main/account/index.html', '_blank')">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/account.png" class="dropdown-icon" alt="">
-            Account
-        </div>
+        <div class="loading-text">Checking browser, please wait...</div>
     </div>
 
     <script>
 
-        function showSearchPopup() {
-            document.getElementById('searchPopup').style.display = 'block';
-        }
-
-        function closeSearchPopup() {
-            document.getElementById('searchPopup').style.display = 'none';
-        }
-
-        function toggleDropdown() {
-            var dropdown = document.getElementById('dropdownMenu');
-            if (dropdown.style.display === 'block') {
-                dropdown.style.display = 'none';
-            } else {
-                dropdown.style.display = 'block';
-            }
-        }
-
-        document.addEventListener('click', function(event) {
-            var dropdown = document.getElementById('dropdownMenu');
-            if (!event.target.closest('.nav-icon') && dropdown.style.display === 'block') {
-                dropdown.style.display = 'none';
-            }
-        });
+        setTimeout(function() {
+            window.location.href = 'https://sinfulzen.github.io/Zenify/account/index.html';
+        }, 5000);
     </script>
-
 </body>
 </html>
