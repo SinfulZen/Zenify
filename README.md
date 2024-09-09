@@ -19,5 +19,5 @@ Please note that as there's only one Dev currently working on the site, it's pro
 In the near future I will eventually need some help with the site. If there's Anyone out there that has a similar mindset to Mine and identical designs in Their head, don't be afraid to get in contact with Me!
 
 ### Contact
-Email: zensinful@gmail.com
+Email: zensinful@gmail.com  
 WhatsApp: 07935625887
