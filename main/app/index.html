@@ -123,6 +123,53 @@
 </body>
 </html>
 
+<!-- BACK FUNCTION -->
+<html>
+<head>
+
+    <style>
+        .back-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+
+        .back-container img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .back-container span {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .back-container:hover span {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="back-container" onclick="goBack()">
+    <img src="https://sinfulzen.github.io/Zenify/assets/icons/back.png" alt="Back Icon">
+    <span>Back</span>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>
+
 <!-- MAIN -->
 <html>
 <head>
