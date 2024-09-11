@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <title>Incomplete</title>
+    <title>Forgot Password?</title>
     <meta name="description" content="An AIO site featuring advanced online tools, programs and projects that are sure to peak Your curiosity!">
     <meta name="keywords" content="Sinful, Zen, SinfulZen, SZ, Developments, SZDevelopments, Company, Organisation, Group, Team, Teams, Software, Tools, Environment, Virtual, Physical, Code, Coder, Coding, Hack, Hacker, Hacking, Develop, Developer, Dev, Drive, Disk, Optical, Storage, Facility, Facilitate, HeadQuarters, HQ, Base, Device, Devices, Mobile, Desktop, Gaming, Phone, Computer, PC, Tablet, Gaming, Console, Social, Media, SocialMedia, Google, Microsoft, Meta, Facebook, Messenger, Instagram, Telegram, WhatsApp, Twitter, X, TikTok, SnapChat, Discord, YouTube, Followers, Subscribers, Likes, Comments, Views, Shares, Stat, Stats, Statistics, Data, Funds, Funding, Money, Pounds, Dollars, Euros, GBP, USD, Subscription, List, Whitelist, Blacklist">
     <meta name="author" content="SZ Developments">
@@ -151,7 +151,7 @@
             z-index: -1;
         }
 
-        .login-container {
+        .main-container {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             padding: 30px;
@@ -159,139 +159,192 @@
             border: 2px solid white;
             text-align: center;
             width: 320px;
+            position: relative;
             z-index: 1;
         }
 
-        .login-icon img {
+        .icon img {
             width: 50px;
             height: 50px;
         }
 
-        .login-header {
+        .header {
             color: white;
             font-family: Arial, sans-serif;
             margin-top: 15px;
         }
 
-        .input-group {
-            position: relative;
-            margin: 15px 0;
-            width: 100%;
-        }
-
-        .input-group input {
-            width: 100%;
-            padding: 10px 10px 10px 40px;
-            border-radius: 10px;
-            border: 2px solid white;
-            background: transparent;
+        .subtext {
             color: white;
-            outline: none;
-            box-sizing: border-box;
-        }
-
-        .input-group img {
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
-        }
-
-        .hyperlinks {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-
-        .hyperlinks a {
-            color: white;
-            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
         }
 
         .button-group {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+        }
+
+        .btn {
+            width: calc(50% - 15px);
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .popup-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid white;
+            text-align: center;
+            z-index: 10000;
+            width: 280px;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            outline: none;
+        }
+
+        .popup-btn {
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .close-text {
+            margin-top: 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .popup-btn-group {
+            display: flex;
+            justify-content: space-between;
             gap: 10px;
         }
 
-        .button-group .btn {
-            width: calc(50% - 5px);
-            padding: 8px;
-            border-radius: 10px;
-            text-align: center;
-            cursor: pointer;
-            color: white;
-            font-family: Arial, sans-serif;
+        .popup-btn {
+            width: calc(50% - 10px);
         }
 
-        .btn-solid {
-            background: transparent;
-            border: 2px solid white;
+        .popup-container .popup-btn,
+        .popup-container .input-group input {
+            margin: 0 auto;
+            display: block;
         }
 
-        .btn-transparent {
-            background: transparent;
-            border: 2px solid white;
-        }
-
-        .or-text {
-            color: white;
-            margin-top: 20px;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
-    <div class="login-container">
 
-        <div class="login-icon">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/account.png" alt="">
+    <div class="main-container">
+
+        <div class="icon">
+            <img src="https://sinfulzen.github.io/Zenify/assets/icons/reset-password.png" alt="">
         </div>
 
-        <h3 class="login-header">Login</h3>
-
-        <div class="input-group">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/username.png" alt="">
-            <input type="text" placeholder="Username">
-        </div>
-        <div class="input-group">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/password.png" alt="">
-            <input type="password" placeholder="Password">
-        </div>
-
-        <div class="hyperlinks">
-            <a href="https://sinfulzen.github.io/Zenify/main/account/signup/index.html">Sign-up</a>
-            <a href="https://sinfulzen.github.io/Zenify/main/account/forgotten/index.html">Forgot password?</a>
-        </div>
+        <div class="header">Forgot Your password?</div>
+        <div class="subtext">Choose a way to recover Your account!</div>
 
         <div class="button-group">
-            <div class="btn btn-solid" onclick="window.location.href='https://sinfulzen.github.io/Zenify/main/home/index.html';">Login</div>
-            <div class="btn btn-transparent" onclick="window.location.href='https://sinfulzen.github.io/Zenify/main/home/index.html';">Guest</div>
-        </div>
-
-        <div class="or-text">Or continue with</div>
-
-        <div class="social-icons">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/google.png" onclick="window.location.href='https://www.social1.com';" alt="">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/microsoft.png" onclick="window.location.href='https://www.social2.com';" alt="">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/facebook.png" onclick="window.location.href='https://www.social3.com';" alt="">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/instagram.png" onclick="window.location.href='https://www.social4.com';" alt="">
-            <img src="https://sinfulzen.github.io/Zenify/assets/icons/twitter.png" onclick="window.location.href='https://www.social5.com';" alt="">
+            <div class="btn" id="login-via-code-btn">Login via Code</div>
+            <div class="btn" id="reset-password-btn">Reset Password</div>
         </div>
     </div>
+
+    <div class="popup-overlay" id="login-popup">
+        <div class="popup-container">
+
+            <div class="popup-btn-group">
+                <div class="popup-btn">Via email</div>
+                <div class="popup-btn">Via SMS</div>
+            </div>
+
+            <div class="close-text" id="close-login-popup">Close</div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="reset-popup">
+        <div class="popup-container">
+
+            <div class="input-group">
+                <input type="password" placeholder="Username">
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="New password">
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Confirm password">
+            </div>
+
+            <button class="popup-btn" id="reset-btn">Reset</button>
+
+            <div class="close-text" id="close-reset-popup">Close</div>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById('login-via-code-btn').addEventListener('click', function() {
+            document.getElementById('login-popup').style.display = 'flex';
+        });
+
+        document.getElementById('reset-password-btn').addEventListener('click', function() {
+            document.getElementById('reset-popup').style.display = 'flex';
+        });
+
+        document.getElementById('close-login-popup').addEventListener('click', function() {
+            document.getElementById('login-popup').style.display = 'none';
+        });
+
+        document.getElementById('close-reset-popup').addEventListener('click', function() {
+            document.getElementById('reset-popup').style.display = 'none';
+        });
+
+        document.getElementById('reset-btn').addEventListener('click', function() {
+            setTimeout(function() {
+                window.location.href = 'https://sinfulzen.github.io/Zenify/main/account/index.html';
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
